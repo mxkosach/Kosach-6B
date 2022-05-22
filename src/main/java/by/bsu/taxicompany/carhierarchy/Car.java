@@ -1,5 +1,7 @@
 package by.bsu.taxicompany.carhierarchy;
 
+import java.io.Serializable;
+
 /**
  * фургон - способность возить большие грузы
  * или много пассажиров - микроавтобус,
@@ -10,7 +12,7 @@ package by.bsu.taxicompany.carhierarchy;
  * седан
  */
 
-public abstract class Car {
+public abstract class Car implements Serializable{
     protected String brand;
     protected String model;
     protected String carID;
