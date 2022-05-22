@@ -28,14 +28,14 @@ public class Connector {
         List<Car> carPool = new ArrayList<>();
         try {
             FileInputStream fis = new FileInputStream("src/main/resources/data/cars.bin");
-            ObjectInputStream oos = new ObjectInputStream(fis);
+            ObjectInputStream ois = new ObjectInputStream(fis);
             while (fis.available() > 0) {
-                Car car = (Car) oos.readObject();
+                Car car = (Car) ois.readObject();
                 carPool.add(car);
             }
 
 
-            oos.close();
+            ois.close();
 
 
         } catch (IOException e) {
